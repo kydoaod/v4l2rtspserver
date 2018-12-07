@@ -9,7 +9,7 @@ env:
 addons:
   coverity_scan:
     project:
-      name: mpromonet/v4l2rtspserver
+      name: kydoaod/v4l2rtspserver
     build_command_prepend: cmake .
     build_command: make
     branch_pattern: coverage
@@ -52,5 +52,5 @@ deploy:
     - "${RELEASE_DEB_FILE}"
   skip_cleanup: true
   on:
-    repo: mpromonet/v4l2rtspserver
+    repo: kydoaod/v4l2rtspserver
     tags: true
