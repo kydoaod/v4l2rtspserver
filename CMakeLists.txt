@@ -61,7 +61,7 @@ target_link_libraries (${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT})
 #ALSA
 
 if("${CMAKE_TOOLCHAIN_FILE}" MATCHES "android.toolchain")
-	find_package(ALSA)
+find_package(ALSA)
 	if (ALSA_LIBRARY)
 		message(STATUS "Alsa available")
 		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_ALSA")
@@ -76,7 +76,6 @@ else()
 		message(STATUS "Alsa available")
 		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_ALSA")
 			target_link_libraries (${PROJECT_NAME} ${ALSA_LIBRARY}) 
-		
 		SET(CPACK_DEBIAN_PACKAGE_DEPENDS ${CPACK_DEBIAN_PACKAGE_DEPENDS}libasound2-dev,)	
 	endif (ALSA_LIBRARY)
 endif()
