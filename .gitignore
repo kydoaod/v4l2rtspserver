@@ -2,7 +2,7 @@
 CMakeFiles/
 CMakeCache.txt
 *.cmake
-Makefile
+./Makefile
 # build
 libv4l2wrapper.a
 v4l2rtspserver
