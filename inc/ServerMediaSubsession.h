@@ -19,6 +19,10 @@
 // live555
 #include <liveMedia.hh>
 
+#ifndef V4L2_PIX_FMT_YUV444
+#define V4L2_PIX_FMT_YUV444  v4l2_fourcc('Y', '4', '4', '4') /* 16  xxxxyyyy uuuuvvvv */
+#endif
+
 // forward declaration
 class V4L2DeviceSource;
 
